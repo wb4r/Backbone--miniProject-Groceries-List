@@ -1,0 +1,112 @@
+html, body {
+  margin: 0;
+  font: normal 14px Helvetica, Arial, sans-serif;
+  color: #402A22;
+  background: #58788C;
+}
+
+main {
+  width: 600px;
+  padding: 25px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+h1 { font-family: Georgia; }
+
+footer h3 {
+  display: inline-block;
+  padding-right: 10px;
+}
+footer ul {
+  display: inline-block;
+  padding: 0;
+}
+
+footer li {
+  display: inline-block;
+}
+footer li + li:before {
+  content: ", ";
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+dt { padding: 0 0 5px 0; }
+dd { margin: 0 0 20px 0; }
+label { font-weight: bold; }
+input[type="text"] {
+  width: 100%;
+  height: 28px;
+  padding: 5px;
+  font: normal 13px Helvetica, Arial, sans-serif;
+  border: 1px solid #cecece;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: inset 0 0 8px #ececec;
+  box-sizing: border-box;
+}
+input[name="quantity"] {
+  width: 50px;
+}
+input[type="submit"] {
+  padding: 12px 20px;
+  font: normal 13px Helvetica, Arial, sans-serif;
+  color: #e0e0e0;
+  border: none;
+  border-radius: 6px;
+  background: #402A22;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  color: #ffffff;
+  background: #8C6B4F;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+th {
+  padding: 0 5px;
+  text-align: left;
+  cursor: pointer;
+}
+
+td {
+  padding: 5px;
+}
+
+td a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 24px;
+  height: 24px;
+  text-indent: -8685px;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 100%;
+  background: #b00b00;
+}
+td a:after {
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  text-indent: 0;
+  content: "X";
+}
+
+tbody tr:nth-of-type(even) td {
+  background: #f0f0f0;
+}
+
+p { text-align: right; }
+p a {
+  color: #58788C;
+}

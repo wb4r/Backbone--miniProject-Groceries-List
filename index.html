@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Backbone Collection Example</title>
+    <meta charset="UTF-8" />
+    <!-- bootstrap -->
+  	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- font-awesome -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- jquery -->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- underscore -->
+    <script src="libs/underscore-min.js"></script>
+    <!-- backbone -->
+    <script src="http://backbonejs.org/backbone-min.js"></script>
+    <!-- handlebars -->
+    <script src="libs/handlebars-v4.0.5.js"></script>
+    <!-- CSS -->
+  	<link rel="stylesheet" type="text/css" href="stylesheets/page.css">
+  </head>
+  <body>
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th id="sortByName" data-prop="name">Name</th>
+            <th id="sortByQuant" data-prop="quantity" colspan="2">Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <p><a id="alldelete" href="#">Delete all</a></p>
+
+      <form action="" method="post">
+        <fieldset>
+          <dl>
+            <dt><label for="name">Name</label></dt>
+            <dd><input type="text" name="name" /></dd>
+            <dt><label for="quantity">Quantity</label></dt>
+            <dd><input type="text" name="quantity" /></dd>
+          </dl>
+          <input type="submit" value="Add Item" />
+        </fieldset>
+      </form>
+    </main>
+
+    <script id="items" type="text/x-handlebars">
+      {{#each items}}
+        {{#with attributes}}
+        {{> item}}
+        {{/with}}
+      {{/each}}
+    </script>
+
+    <script id="item" type="text/x-handlebars">
+      <tr>
+        <td>{{name}}</td>
+        <td>{{quantity}}</td>
+        <td><a class="btn" data-id="{{id}}" href="#">Delete</a></td>
+      </tr>
+    </script>
+
+    <script>
+      var items_json = [{
+        name: "Bananas",
+        quantity: 3
+      }, {
+        name: "Apples",
+        quantity: 4
+      }];
+    </script>
+    <script src="js/model.js"></script>
+  </body>
+</html>
